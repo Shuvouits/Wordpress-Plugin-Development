@@ -23,5 +23,16 @@
     echo '<div class="notice notice-error is-dismissible"><p>Hello, I am a success message</p></div>';
  }
 
+ add_action("wp_dashboard_setup", "hw_hellow_world_dashboard_widget");
+
+ function hw_hellow_world_dashboard_widget(){
+    wp_add_dashboard_widget("hw_hellow_world", "HW - Hello World Widget", "hw_custom_admin_widget");
+
+ }
+
+ function hw_custom_admin_widget(){
+    echo "This is Helllo World Custom Admin Widget";
+ }
+
 
 ?>
